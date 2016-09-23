@@ -3,25 +3,21 @@ package com.newt.controller;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-
- 
- 
+import org.springframework.web.bind.annotation.RestController; 
 import com.newt.model.Orders;
-import com.newt.repository.OrderRepository;
+import com.newt.repository.DeliveryRepository; 
 import com.wordnik.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/orders")
-public class OrderController {
+@RequestMapping("/delivery")
+public class DeliveryController {
 	
 	@Autowired
-	private OrderRepository orderRepository;
+	private DeliveryRepository orderRepository;
 	@Autowired
     private Notifications notifications;
 	
